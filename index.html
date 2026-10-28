@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Quiz Application | Lecture 10</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <header class="quiz-header">
+        <h1>Computer Science & Web Dev Quiz</h1>
+        <p class="subtitle">Lecture 10 Project · By Golu Kumar (JECRC University)</p>
+      </header>
+
+      <!-- Start Screen -->
+      <div id="start-screen" class="card">
+        <h2>Welcome to the Quiz!</h2>
+        <p>Test your knowledge of HTML, CSS, JavaScript, and Computer Science fundamentals.</p>
+        <ul class="rules-list">
+          <li>5 Multiple Choice Questions</li>
+          <li>Instant feedback with explanations</li>
+          <li>Review answers at the end</li>
+        </ul>
+        <button id="start-btn" class="btn btn-primary">Start Quiz</button>
+      </div>
+
+      <!-- Quiz Screen -->
+      <div id="quiz-screen" class="card" hidden>
+        <div class="quiz-status">
+          <span id="question-count">Question 1 of 5</span>
+          <span id="score-live">Score: 0</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div id="progress-bar-fill" class="progress-bar-fill" style="width: 20%;"></div>
+        </div>
+        <h2 id="question-text" class="question-text">Question goes here?</h2>
+        <div id="options-container" class="options-container">
+          <!-- Dynamic option buttons inserted via script.js -->
+        </div>
+        <div id="feedback" class="feedback" hidden></div>
+        <button id="next-btn" class="btn btn-primary" hidden>Next Question</button>
+      </div>
+
+      <!-- Results Screen -->
+      <div id="result-screen" class="card" hidden>
+        <h2>Quiz Completed!</h2>
+        <div class="result-circle">
+          <span id="final-score">0 / 5</span>
+          <span class="score-label">Final Score</span>
+        </div>
+        <p id="result-message" class="result-message">Good effort!</p>
+        <button id="restart-btn" class="btn btn-primary">Try Again</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
